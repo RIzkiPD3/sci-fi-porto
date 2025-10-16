@@ -175,3 +175,81 @@ body {
 .animate-data-stream {
   animation: dataStream 15s linear infinite;
 }
+
+/* Neon glow effects for navbar and interactive elements */
+.neon-text {
+  text-shadow: 0 0 5px currentColor, 0 0 10px currentColor,
+    0 0 15px currentColor;
+}
+
+.glow-hover {
+  transition: all 0.3s ease;
+}
+
+.glow-hover:hover {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor,
+    0 0 30px currentColor;
+  transform: scale(1.05);
+}
+
+/* Navbar specific styles */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-cyan), var(--primary-blue));
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+/* Ensure navbar buttons are properly spaced */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-menu button {
+  display: inline-block;
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Button glow effects */
+.button-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-glow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 230, 230, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.button-glow:hover::before {
+  left: 100%;
+}

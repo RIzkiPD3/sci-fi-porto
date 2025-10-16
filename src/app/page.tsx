@@ -1,15 +1,20 @@
-import Hero from "../components/ui/Hero";
+import Navbar from "../components/layout/Navbar";
+import HeroSection from "../components/sections/HeroSection";
 
 export default function Home() {
   return (
     <div className="relative z-10">
+      {/* Navbar */}
+      <Navbar />
+
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center">
-        <Hero />
-      </section>
+      <HeroSection />
 
       {/* About Section Placeholder */}
-      <section className="min-h-screen flex items-center justify-center p-8">
+      <section
+        id="about"
+        className="min-h-screen flex items-center justify-center p-8"
+      >
         <div className="max-w-4xl mx-auto text-center content-container">
           <h2 className="font-orbitron text-4xl md:text-6xl font-bold text-cyan-glow mb-8 fade-in text-readable">
             About
@@ -22,7 +27,10 @@ export default function Home() {
       </section>
 
       {/* Projects Section Placeholder */}
-      <section className="min-h-screen flex items-center justify-center p-8">
+      <section
+        id="projects"
+        className="min-h-screen flex items-center justify-center p-8"
+      >
         <div className="max-w-6xl mx-auto text-center content-container">
           <h2 className="font-orbitron text-4xl md:text-6xl font-bold text-blue-glow mb-8 fade-in text-readable">
             Projects
@@ -35,7 +43,10 @@ export default function Home() {
       </section>
 
       {/* Contact Section Placeholder */}
-      <section className="min-h-screen flex items-center justify-center p-8">
+      <section
+        id="contact"
+        className="min-h-screen flex items-center justify-center p-8"
+      >
         <div className="max-w-4xl mx-auto text-center content-container">
           <h2 className="font-orbitron text-4xl md:text-6xl font-bold text-cyan-glow mb-8 fade-in text-readable">
             Contact
